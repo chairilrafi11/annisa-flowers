@@ -1,0 +1,75 @@
+/* Message Container */
+#message-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+}
+
+/* Section Fade-in */
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+  margin-top: 50px;
+}
+
+/* When visible */
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Grid Layout Alternating */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.section img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.section p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #d63384;
+  font-weight: 500;
+}
+
+/* Photo-only */
+.photo-big {
+  width: 280px;
+  border-radius: 18px;
+  margin-top: 40px;
+}
+
+/* Final message */
+.final-text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 35px;
+  color: #c21875;
+}
+
+/* Button */
+.btn-flower {
+  background: #ff8ac7;
+  padding: 12px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btn-flower:hover {
+  transform: scale(1.07);
+}

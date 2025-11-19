@@ -29,186 +29,67 @@
   <!-- ========================================================= -->
 
   <!-- ================= CONTENT AFTER ENVELOPE ================= -->
+  <div id="message-content" style="display:none;">
 
-  <div id="message-content" style="display:none; text-align:center; padding: 20px;">
-    
-    <!-- Typing Effect Text -->
-    <p id="typed-text" 
-      style="font-size: 22px; color:#d63384; max-width: 80%; margin: 0 auto; line-height:1.6; font-weight:500;">
+    <!-- Opening Typed Text -->
+    <p id="typed-opening"
+      style="font-size: 22px; color:#d63384; max-width: 80%; margin: 0 auto; font-weight:500;">
     </p>
 
-    <!-- Photo Section -->
-    <div style="margin-top: 25px;">
-      <img id="couple-photo" src="images/ourphoto.jpg" 
-          style="width:260px; height:auto; border-radius:18px; box-shadow:0 4px 12px rgba(0,0,0,0.15); opacity:0; transition:0.6s;">
+    <!-- SECTION 1 -->
+    <div id="section1" class="section">
+      <div class="section-grid">
+        <img src="images/pic1.jpg">
+        <p>
+          Dari pertama kali aku kenal kamu, aku udah tahu kalau kamu itu berbeda.
+          Kamu selalu punya cara buat bikin hari aku lebih hangat.
+        </p>
+      </div>
     </div>
 
-    <!-- Open Flower Button -->
-    <div style="margin-top:32px; opacity:0; transition:0.6s;" id="flower-button-wrapper">
-      <a href="flower.html" class="btn-flower">
-        🌸 Open Flowers 🌸
-      </a>
+    <!-- SECTION 2 -->
+    <div id="section2" class="section">
+      <div class="section-grid">
+        <p>
+          Kadang aku mikir, kok bisa ya seseorang sebaik kamu muncul di hidup aku?
+          Kamu itu lembut, perhatian, dan selalu ngebuat aku nyaman.
+        </p>
+        <img src="images/pic2.jpg">
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div id="section3" class="section">
+      <div class="section-grid">
+        <img src="images/pic3.jpg">
+        <p>
+          Aku cuma mau bilang… aku bersyukur banget karena kamu ada.
+          Setiap momen sama kamu tuh selalu jadi hal yang aku simpan baik-baik.
+        </p>
+      </div>
+    </div>
+
+    <!-- PHOTO ONLY -->
+    <div id="section4" class="section">
+      <img src="images/annisa.jpg" class="photo-big">
+    </div>
+
+    <!-- FINAL TEXT -->
+    <div id="section5" class="section final-text">
+      Selamat Ulang Tahun Annisa 💖<br>
+      Semoga kamu selalu bahagia, sehat, dan dikelilingi hal-hal baik.
+    </div>
+
+    <!-- BUTTON -->
+    <div id="section6" class="section">
+      <a href="flower.html" class="btn-flower">🌸 Open Flowers 🌸</a>
     </div>
   </div>
-
 
   <!-- Piano Music -->
   <audio id="piano-music" src="audio/piano.mp3"></audio>
 
+  <!-- Import Javascript -->
   <script src="js/index.js"></script>
-  <script>
-    const envelope = document.getElementById("envelope");
-    const overlay = document.getElementById("envelope-overlay");
-    const letter = document.querySelector(".letter");
-    const mainButton = document.getElementById("main-button");
-    const music = document.getElementById("piano-music");
-
-    envelope.addEventListener("click", () => {
-      overlay.classList.add("open");
-      popHearts();
-      burstConfetti();
-
-      // Show letter
-      setTimeout(() => {
-        letter.classList.add("show-letter");
-        document.getElementById("next-btn").style.display = "block";
-      }, 600);
-
-      // Play music
-      music.volume = 0.7;
-      music.play();
-    });
-    
-    document.getElementById("next-btn").addEventListener("click", () => {
-      overlay.style.opacity = "0";
-
-      setTimeout(() => {
-        overlay.style.display = "none";
-        mainButton.style.display = "flex";
-      }, 700);
-    });
-
-    // ========== HEART POP ANIMATION ==========
-    function popHearts() {
-      for (let i = 0; i < 8; i++) {
-        const heart = document.createElement("div");
-        heart.classList.add("popping-heart");
-        heart.innerHTML = "💖";
-
-        // Random x position
-        heart.style.left = `${Math.random() * window.innerWidth}px`;
-        heart.style.top = `${window.innerHeight - 100}px`;
-
-        document.body.appendChild(heart);
-
-        setTimeout(() => {
-          heart.remove();
-        }, 1400);
-      }
-    }
-
-        /* ============= HEART SHOWER EVERY 2s ============= */
-    setInterval(() => {
-      const hearts = ["💖","💕","💗","💞","💓"];
-      const h = document.createElement("div");
-      h.classList.add("popping-heart");
-      h.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
-
-      h.style.left = `${Math.random() * window.innerWidth}px`;
-      h.style.top = `${window.innerHeight - 50}px`;
-
-      document.body.appendChild(h);
-      setTimeout(() => h.remove(), 1500);
-    }, 300);
-
-    /* ============= SPARKLES NEAR ENVELOPE ============= */
-    setInterval(() => {
-      const s = document.createElement("div");
-      s.classList.add("sparkle-burst");
-      s.innerHTML = "✨";
-
-      s.style.left = `${window.innerWidth/2 + (Math.random()*120 - 60)}px`;
-      s.style.top = `${window.innerHeight/2 - 40}px`;
-
-      document.body.appendChild(s);
-      setTimeout(() => s.remove(), 1800);
-    }, 500);
-
-    /* ============= STARS TWINKLING ALL AROUND ============= */
-    setInterval(() => {
-      const star = document.createElement("div");
-      star.classList.add("star-twinkle");
-      star.innerHTML = "⭐";
-
-      star.style.left = `${Math.random() * window.innerWidth}px`;
-      star.style.top = `${Math.random() * window.innerHeight}px`;
-
-      document.body.appendChild(star);
-      setTimeout(() => star.remove(), 2000);
-    }, 400);
-
-    /* ============= CONFETTI BURST WHEN OPENING ============= */
-    function burstConfetti() {
-      for (let i = 0; i < 25; i++) {
-        const c = document.createElement("div");
-        c.classList.add("confetti");
-        c.style.left = `${window.innerWidth / 2}px`;
-        c.style.top = `${window.innerHeight / 2}px`;
-        c.style.background = `hsl(${Math.random()*360}, 80%, 70%)`;
-        c.style.transform = `rotate(${Math.random()*360}deg)`;
-        document.body.appendChild(c);
-
-        setTimeout(() => c.remove(), 2000);
-      }
-    }
-
-    /* ============= CALL CONFETTI WHEN ENVELOPE OPEN ============= */
-    envelope.addEventListener("click", () => {
-      burstConfetti();
-    });
-
-    const messageContent = document.getElementById("message-content");
-    const typedText = document.getElementById("typed-text");
-    const couplePhoto = document.getElementById("couple-photo");
-    const flowerBtnWrapper = document.getElementById("flower-button-wrapper");
-
-    // Text yang mau di typing
-    const birthdayMessage = 
-      "Happy Birthday Annisaaa 💖\n" +
-      "Semoga hari kamu selalu penuh kebahagiaan.\n" +
-      "Terima kasih sudah jadi orang yang sangat berarti buat aku.\n" +
-      "Semoga semua hal baik selalu menyertai kamu yaa 💕✨";
-
-    let index = 0;
-
-    // Function Typing Effect
-    function typeMessage() {
-      if (index < birthdayMessage.length) {
-        typedText.innerHTML += birthdayMessage.charAt(index);
-        index++;
-        setTimeout(typeMessage, 55);
-      } else {
-        // After typing finished, show photo
-        setTimeout(() => {
-          couplePhoto.style.opacity = 1;
-        }, 400);
-
-        // Show button afterwards
-        setTimeout(() => {
-          flowerBtnWrapper.style.opacity = 1;
-        }, 1000);
-      }
-    }
-
-    // When Next button clicked → Show message page
-    document.getElementById("next-btn").addEventListener("click", () => {
-      setTimeout(() => {
-        messageContent.style.display = "block";
-        typeMessage();
-      }, 600);
-    });
-
-  </script>
-
 </body>
 </html>
