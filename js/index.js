@@ -3,11 +3,13 @@ const envelope = document.getElementById("envelope");
 const overlay = document.getElementById("envelope-overlay");
 const letter = document.querySelector(".letter");
 const nextBtn = document.getElementById("next-btn");
-const music = document.getElementById("piano-music");
 const messageContent = document.getElementById("message-content");
 
-music.volume = 0.7;
-music.play();
+onload = () => {
+  const music = document.getElementById("piano-music");
+  music.volume = 0.7;
+  music.play();
+};
 
 /* =================== ENVELOPE OPEN ==================== */
 envelope.addEventListener("click", () => {
