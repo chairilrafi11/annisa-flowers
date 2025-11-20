@@ -2,7 +2,7 @@
 onload = () => {
   const music = document.getElementById("piano-music");
   music.volume = 0.7;
-  // music.play();
+  music.play();
   
   const c = setTimeout(() => {
     document.body.classList.remove("not-loaded");
