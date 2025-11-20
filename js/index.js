@@ -5,14 +5,11 @@ const letter = document.querySelector(".letter");
 const nextBtn = document.getElementById("next-btn");
 const messageContent = document.getElementById("message-content");
 
-onload = () => {
-  const music = document.getElementById("piano-music");
-  music.volume = 0.7;
-  music.play();
-};
-
 /* =================== ENVELOPE OPEN ==================== */
 envelope.addEventListener("click", () => {
+  const music = document.getElementById("piano-music");
+  music.volume = 0.7;
+  music.play().catch(err => console.log(err));
   overlay.classList.add("open");
   popHearts();
   burstConfetti();
