@@ -104,23 +104,10 @@ function burstConfetti() {
 }
 
 /* =================== OPENING TEXT TYPING =================== */
-// const openingText = 
-//   "Cieee Annisaaa ulang tahun\n" +
-//   "Aku mau cerita sedikit sebelum ngasih hadiahnya...\n" +
-//   "Baca pelan-pelan yaa cantik✨ ✨\n" +
-//   "Beberapa minggu ini pasti kamu bertanya-tanya dengan sikap aku ke kamu yang tiba tiba jadi pendiem cuekin kamu seolah-olah tidak ada yang terjadi sewaktu pulang dari merbabu.\n" +
-//   "If you want to know, Sebenernya aku bimbang apa yang aku telah perbuat sama kamu, mix feeling banget seriusss 😣😣😣. Awalnya aku hanya ingin ngajak kamu buat naik gunung bareng, aku lagi seneng di jeda ativitas pekerjaan untuk explore keindahan alam\n" +
-//   "Seneng banget deh bisa ajak kamu untuk ikut bareng apalagi kita sama sama suka untuk explore.\n" +
-//   "Sebelum berangkatpun banyak drama dari kamu yang khawatir ga bisa cuti terus mental yang ga siap karena ini pertama kali 3.0000 mdpl wkwkwkwk\n" +
-//   "Terus aku yang plin plan buat rencana yang ganti ganti bikin kamu kesel jugaa hehehe maafin yaaa😗😗😗\n" +
-//   "Kita jadi juga buat naik ke merbabu meskipun pada hari itu cuacanya kurang optimal, di jalan pergi sampe pulang kita barengan terus yaaa berduaan sampe diliatin orang-orang karena se deket ituuu. kamu kaget ya karena jauh banget ga sampe sampe udah kehabisan tenaga sampe hampir nangis di jalan huhuhu kasian 🥲.\n" + 
-//   "Pada akhirnya kamu hebat banget bisa sampe atas yeayy, selamat atas 3.000 mdpl pertama kamu yaaa.\n Butttt Terlepas dari itu aku membuat hal yang membuat kamu tidak nyaman 😔 \n"  +
-//   "Yaa yu knoww lah saat malam kita di tenda aku terbawa suasana padahal kita belum ada komitmen apa-apa hehehe.\n" +
-//   "Aku seperti menaruh harapan buat kamu tetapi setelah kita pulang seolah harapan itu dibuang begitu saja. Jujur ini aku salah banget ga ada niatan apa apa, belum siap untuk melangkah lebih jauh lagi dari ini karena aku takut apakah perasaan ini hanya sesaat di karenakan aku bersama kamu di merbabu saja karena aku ingin menyayangi seseorang secara tulus bukan sekedar dari sini.\n" +
-//   "";
-
 const openingText = 
-  "Cieee Annisaaa ulang tahun\n";
+  "Cieee Annisaaa ulang tahun\n" +
+  "Aku mau cerita sedikit sebelum ngasih hadiahnya...\n" +
+  "Baca pelan-pelan yaa cantik✨ ✨\n";
 
 let openIndex = 0;
 const typedOpening = document.getElementById("typed-opening");
