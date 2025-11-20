@@ -6,6 +6,9 @@ const nextBtn = document.getElementById("next-btn");
 const music = document.getElementById("piano-music");
 const messageContent = document.getElementById("message-content");
 
+music.volume = 0.7;
+music.play();
+
 /* =================== ENVELOPE OPEN ==================== */
 envelope.addEventListener("click", () => {
   overlay.classList.add("open");
@@ -17,8 +20,6 @@ envelope.addEventListener("click", () => {
     nextBtn.style.display = "block";
   }, 600);
 
-  music.volume = 0.7;
-  music.play();
 });
 
 /* AFTER CLICK NEXT BUTTON */
@@ -105,7 +106,7 @@ function burstConfetti() {
 
 /* =================== OPENING TEXT TYPING =================== */
 const openingText = 
-  "Cieee Annisaaa ulang tahun\n" +
+  "Cieee Anisaaa ulang tahun\n" +
   "Aku mau cerita sedikit sebelum ngasih hadiahnya...\n" +
   "Baca pelan-pelan yaa cantik✨ ✨\n";
 
