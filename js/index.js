@@ -10,6 +10,11 @@ envelope.addEventListener("click", () => {
   const music = document.getElementById("piano-music");
   music.volume = 0.7;
   music.play().catch(err => console.log(err));
+
+  const vid = document.getElementById("bg-video");
+  vid.play().catch(err => console.log(err));
+  vid.muted = true;
+
   overlay.classList.add("open");
   popHearts();
   burstConfetti();
