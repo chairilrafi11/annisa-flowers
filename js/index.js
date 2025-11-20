@@ -106,7 +106,7 @@ function burstConfetti() {
 /* =================== OPENING TEXT TYPING =================== */
 const openingText = 
   "Cieee Anisaaa ulang tahun\n" +
-  "Aku mau cerita sedikit sebelum ngasih hadiahnya...\n" +
+  "Aku mau cerita sedikit sebelum ngasih kadonyaa...\n" +
   "Baca pelan-pelan yaa cantik✨ ✨\n";
 
 let openIndex = 0;

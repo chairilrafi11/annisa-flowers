@@ -713,7 +713,7 @@ body {
 /* Text */
 .section-grid p {
   width: 80%;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.6;
   color: #444;
   font-weight: 400;
@@ -777,7 +777,7 @@ body {
   }
 
   .section-grid p {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .photo-big {
